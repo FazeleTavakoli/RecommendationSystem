@@ -1,0 +1,15 @@
+#####################
+#   Commons Lang3   #
+#####################
+remote_file(
+    name = 'commons-lang3-source',
+    out = 'commons-lang3-source.jar',
+    url = 'mvn:org.apache.commons:commons-lang3:jar:3.7',
+    sha1 = '557edd918fd41f9260963583ebf5a61a43a6b423',
+)
+
+prebuilt_jar(
+    name = 'commons-lang3',
+    binary_jar = ':commons-lang3-source',
+    visibility = ['//:rake']
+)

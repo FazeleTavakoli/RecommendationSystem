@@ -1,0 +1,10 @@
+##################
+#   Stop Words   #
+##################
+remote_file(
+    name = 'stopwords',
+    url = 'https://github.com/golinguistic/stopwords/archive/v0.1.zip',
+    type = 'exploded_zip',
+    sha1 = '8a404680f939389cde431f77cf12d90e7299f80e',
+    visibility = ['//:rake']
+)
